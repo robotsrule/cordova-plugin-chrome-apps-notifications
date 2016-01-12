@@ -153,6 +153,7 @@ public class ChromeNotifications extends CordovaPlugin {
             .setContentTitle(options.getString("title"))
             .setContentText(options.getString("message"))
             .setLargeIcon(largeIcon)
+            .setDefaults(Notification.DEFAULT_ALL)
             .setPriority(options.optInt("priority"))
             .setContentIntent(makePendingIntent(NOTIFICATION_CLICKED_ACTION, notificationId, -1, PendingIntent.FLAG_CANCEL_CURRENT))
             .setDeleteIntent(makePendingIntent(NOTIFICATION_CLOSED_ACTION, notificationId, -1, PendingIntent.FLAG_CANCEL_CURRENT));
